@@ -1,0 +1,281 @@
+/* Programming Challenge
+            Programming Challenge
+            On Your Own:    ch. 5
+            Description:
+			Create a html web page that allows the coach of a town’s soccer league to enter the ages of all the children who have 
+			registered for soccer this year. 
+			Children between the ages of 4 and 15 are allowed to sign up for soccer but there can be a lot of variation in the number of 
+			children who sign up each year and their ages. Eventually the children will be placed into one of 
+			three leagues: Junior, Intermediate, and Senior. The Junior League is for children ages 4–7, the Junior League is for 
+			children ages 8–11, and the Senior League is for children ages 12–15. The coach wants to know how many children will be in each group
+			. Your program should allow the coach to enter the ages of as many children as desired and should keep track
+			of how many are in each group. The final display should tell the coach how many children signed up and how many will be in each group. 
+			Save your page as soccer.html and be sure to include an appropriate page title.
+                        
+            Created by: Jerry French  
+						csc240
+            Created on: 3/30/2022,
+
+
+/* CSS reset */
+/* make sure all browsers run code the same */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,figure,figcaption { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{									/* CSS reset */
+    border:1px solid #b0b0b0;
+    padding:3px 5px 4px;
+    color:#979797;
+    width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
+/* style rules for mobile */
+
+
+/*Body Graphics*/
+body {
+
+	/* background image */
+	background-image: linear-gradient(to bottom, rgba(217, 217, 217,1), rgba(191, 191, 191,1));
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	
+/*text*/
+	text-align: center;
+	color: rgb(0, 0, 77);
+	font-family: Courgette, sans-serif, ariel;
+	font-size: 100%
+}
+
+
+/* header display */
+
+	/*header always visable and moves with scoll*/
+header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	height: auto;
+	width: auto;
+
+	/* background image */
+	background-image: linear-gradient(to bottom, rgba(172, 198, 210,1), rgba(0,0,0,1));
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	
+	border-style: double;
+	border-width: 12px;
+	
+	font-family: Roboto, sans-serif, ariel;
+	font-size: 1.5em;
+	
+	padding-top: 5%;
+	padding-right: 10%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	
+	margin: 1%;
+	
+	border-radius: 90%;
+}
+
+
+
+button{
+  outline: none;
+  border: none;
+  width: 14%;
+  height: 40px;
+  margin-right: 30px;
+  margin-top: 50px;
+  font-size: 22px;
+  background-color: teal;
+}
+ 
+
+
+	
+	/* link display */
+	
+/* unvisited link */
+a:link {
+  color: rgb(255, 51, 0);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  }
+
+  
+  /* navigation display */
+
+nav{
+	/* background image */
+	background-image: linear-gradient(to bottom, rgba(172, 198, 210,1), rgba(0,0,0,1));
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	
+	border-style: double;
+	border-width: 12px;
+	
+	font-size: 1.5em;
+	
+	padding-top: 2%;
+	padding-right: 3%;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	
+	/*width: 50%;*/
+	
+	
+	margin-bottom: 1%
+}
+
+nav li {
+	display: block;
+	border: 2px solid #555;
+	list-style-type: none;
+	
+}
+
+
+
+/* main content display */
+
+center{
+
+	/* background image */
+	background-image: linear-gradient(to bottom, rgba(172, 198, 210,1), rgba(0,0,0,0.5));
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	
+	border-style: double;
+	border-width: 12px;
+	border-radius: 25px;
+	
+	font-size: 100%;
+	
+	
+	padding-top: 2%;
+	padding-right: 3%;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	
+	
+	margin: 0 auto;
+}
+
+
+
+
+
+th, td {
+  font-size: 90%;
+  text-align: left;
+}
+
+
+
+}
+textarea{
+	width: 20em;
+	height: 60em
+
+}
+	
+
+
+
+
+/* footer display */
+footer{
+
+	/* background image */
+	background-image: linear-gradient(to bottom, rgba(210, 172, 172,1), rgba(172, 210, 172,1));
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	
+	border-style: double;
+	border-width: 12px;
+	
+	float: bottom;	
+}
+
+/* For tablets: */
+  @media only screen and (min-width: 600px) {
+  
+ header {
+	
+	padding-top: 1%;
+	padding-right: 2%;
+	padding-bottom: 1%;
+	padding-left: 2%;
+	
+	font-size: 1em;
+}
+
+body{
+	text-shadow: 2px 2px 5px pink;
+	font-family: Roboto, sans-serif, ariel;
+	font-size: 2em;
+}
+  
+ 
+table, th, tr, td {
+	font-size: 80%;
+}
+caption{
+
+	font-size: 150%;
+}
+
+}
+
+	/* For desktop: */
+
+
+
+	
